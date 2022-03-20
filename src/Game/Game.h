@@ -22,13 +22,13 @@ public:
 	void Process_Input();
 	void Update();
 	void Generate_Output();
-	void Load_Data(); 
+	void Load_Data();
 	void Load_Shaders();
 
 public:
 	class Scene* Create_Scene(const std::string&& scene_tag);
 	void Set_Active_Scene(const std::string&& scene_tag);
-	class SceneNode* Create_Scene_Node(class Scene* scene, std::string&& _tag); 
+	class SceneNode* Create_Scene_Node(class Scene* scene, std::string&& _tag);
 	void Remove_Scene_Node(class Scene* scene, SceneNode* scene_node);
 	void Remove_Actor(class Scene*scene, class Actor* actor);
 	void Add_Component(class SceneNode* scene_node, ComponentType type);

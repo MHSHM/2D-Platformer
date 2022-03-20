@@ -44,7 +44,7 @@ bool Game::Init()
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
-	window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Mario", NULL, NULL);
+	window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "2D Platformer", NULL, NULL);
 	if (!window)
 	{
 		std::cerr << "failed to create window!\n";
@@ -398,7 +398,7 @@ void Game::Update()
 		}
 
 		// winner
-		if (Is_Colliding(*player_collider, *finish_line_collider)) 
+		if (Is_Colliding(*player_collider, *finish_line_collider) && !is_lost)
 		{
 			audio_player.sound_engine->stopAllSounds(); 
 			Set_Active_Scene("winner"); 

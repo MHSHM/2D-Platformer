@@ -1,0 +1,7 @@
+
+*.obj
+*.idb
+*.pdb
+*.tlog
+*.log
+*.recipe
